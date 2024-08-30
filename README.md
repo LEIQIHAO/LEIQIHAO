@@ -1,16 +1,24 @@
-## Hi there 👋
+| 这个作业属于哪个课程 | <https://edu.cnblogs.com/campus/gdgy/CSGrade22-34/> |
+| ----------------- |--------------- |
+| 这个作业要求在哪里| <https://edu.cnblogs.com/campus/gdgy/CSGrade22-34/homework/13228> |
+| 这个作业的目标 | <学会使用博客和github，学会使用git的简单使用和markdowm语法，为之后的学习打下基础> |
+# 自我介绍
+我的名字是雷棋皓，做事认真负责，平时比较喜欢运动和玩游戏，目前正在往前端方向发展
+# 软工五问
+1、软件工程这门学科产生的原因是什么？主要是为了解决什么问题？
+2、怎么判断一个方案是否可行？
+3、怎么精准判断用户需求，得到资金注入？
+4、软件开发的流程是什么？
+5、软件的黑白盒测试是什么？
 
-<!--
-**LEIQIHAO/LEIQIHAO** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# 收获期望
+学好相应的知识，提高自己的知识，熟悉软件开发的具体流程，培养团队协作的能力
+Github
+个人地址：https://github.com/LEIQIHAO
 
-Here are some ideas to get you started:
+仓库地址：https://github.com/LEIQIHAO/LEIQIHAO
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+
+博客后台
+![](https://img2024.cnblogs.com/blog/3509279/202408/3509279-20240831002654312-1525785850.png)
