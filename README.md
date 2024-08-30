@@ -13,8 +13,8 @@
 
 # 收获期望
 学好相应的知识，提高自己的知识，熟悉软件开发的具体流程，培养团队协作的能力
-Github
-个人地址：https://github.com/LEIQIHAO
+
+Github个人地址：https://github.com/LEIQIHAO
 
 仓库地址：https://github.com/LEIQIHAO/LEIQIHAO
 
