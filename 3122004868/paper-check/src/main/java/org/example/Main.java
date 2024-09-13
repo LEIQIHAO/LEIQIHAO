@@ -3,6 +3,8 @@ package org.example;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.IORuntimeException;
 import org.apache.commons.lang3.StringUtils;
+import org.example.utils.Jaccard;
+import org.example.utils.Text;
 
 import java.io.File;
 import java.util.Set;
@@ -12,6 +14,33 @@ public class Main {
         // 检测传入参数
         if (!validate(args)) {
             return;
+        }
+        String originTextURL = args[0];
+        String originAddTextURL = args[1];
+        String targetURL = args[2];
+
+        // 读文件
+        String originText;
+        String originAddText;
+        try {
+            originText = FileUtil.readUtf8String(originTextURL).trim();
+            originAddText = FileUtil.readUtf8String(originAddTextURL).trim();
+        } catch (IORuntimeException e) {
+            System.err.println(" 读取文件失败：" + e.getMessage());
+            return;
+        }
+
+        // 分词
+        Set<String> originTextWords = Text.ikSegment(originText);
+        Set<String> originAddTextWords = Text.ikSegment(originAddText);
+
+        // 计算相似度
+        String similarity = String.format("%.2f", Jaccard.calculate(originTextWords, originAddTextWords));
+        System.out.println("相似度：" + similarity);
+        try {
+            FileUtil.writeUtf8String(similarity, targetURL);
+        } catch (IORuntimeException e) {
+            System.err.println(" 写入文件失败：" + e.getMessage());
         }
     }
     private static boolean validate(String[] args) {
@@ -42,16 +71,16 @@ public class Main {
     }
     // 检查字符串是否为合法，是否为null或者为空
     private static boolean isPathString(String str) {
-        return !StringUtils.isBlank(str) && isPath(str);
+        return StringUtils.isBlank(str) || isPath(str);
     }
     private static boolean isPath(String path) {
         File file = new File(path);
         try {
             // 尝试获取绝对路径，检查路径格式是否正确
             file.getCanonicalPath();
-            return true;
-        } catch (Exception e) {
             return false;
+        } catch (Exception e) {
+            return true;
         }
     }
 }
