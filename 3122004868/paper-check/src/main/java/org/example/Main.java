@@ -77,7 +77,7 @@ public class Main {
         File file = new File(path);
         try {
             // 尝试获取绝对路径，检查路径格式是否正确
-            file.getCanonicalPath();
+            String fileStr = file.getCanonicalPath();
             return false;
         } catch (Exception e) {
             return true;
